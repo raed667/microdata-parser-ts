@@ -19,5 +19,6 @@ export const getPropValue = (
   return api(tag)
     .text()
     .replace(/[\n\t\r]+/g, '')
-    .replace(/ +(?= )/g, '')?.trim()
+    .replace(/ +(?= )/g, '')
+    ?.trim()
 }

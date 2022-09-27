@@ -24,7 +24,7 @@ describe('microdata-parser-ts', () => {
           name: 'http://schema.org/Offer',
           properties: {
             price: product.offer.price,
-            availability: product.offer.availability
+            availability: product.offer.availability,
           },
         },
       ])

@@ -1,4 +1,3 @@
-
 export const product = {
   name: 'Pepsi Cola',
   image: 'path/to/pepsi.png',
@@ -7,7 +6,7 @@ export const product = {
     price: '€42.00',
     availability: 'InStock',
     description: 'A fresh bottle of soda.',
-  }
+  },
 }
 
 export const productHTML = `
