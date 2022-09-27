@@ -35,26 +35,3 @@ jobs:
 
       - name: Run tests
         run: yarn test
-
-      - name: Run coverage
-        run: yarn test:jest | tee ./coverage.txt
-
-      - name: Jest coverage comment
-        if: ${{ github.ref == 'refs/heads/main' }}
-        id: coverageComment
-        uses: MishaKav/jest-coverage-comment@main
-        with:
-          hide-summary: true
-          coverage-summary-path: ./coverage/coverage-summary.json
-
-      - name: Update Readme with Coverage Html
-        if: ${{ github.ref == 'refs/heads/main' }}
-        run: |
-          sed -i '/<!-- Jest Coverage Comment:Begin -->/,/<!-- Jest Coverage Comment:End -->/c\<!-- Jest Coverage Comment:Begin -->\n\${{ steps.coverageComment.outputs.summaryHtml }}\n<!-- Jest Coverage Comment:End -->' ./README.md
-
-      - name: Commit & Push changes to Readme
-        if: ${{ github.ref == 'refs/heads/main' }}
-        uses: actions-js/push@master
-        with:
-          message: Update coverage on Readme
-          github_token: ${{ secrets.GITHUB_TOKEN }}

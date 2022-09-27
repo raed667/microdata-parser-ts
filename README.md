@@ -2,6 +2,9 @@
 
 Lightweight microdata parser and extractor written in TypeScript. Easily scrape microdata from websites.
 
+<!-- Jest Coverage Comment:Begin -->
+<!-- Jest Coverage Comment:End -->
+
 ## Installation
 
 ```sh
