@@ -1,0 +1,7 @@
+{
+    "name": "microdata-parser-ts",
+    "np": {
+        "yarn": false,
+        "contents": "build"
+    }
+}
